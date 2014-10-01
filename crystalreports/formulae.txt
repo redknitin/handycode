@@ -1,0 +1,20 @@
+Formula Expressions for Crystal Reports
+
+---
+
+//Converting no of seconds to hrs, mins, secs
+
+NumberVar TotalSec :=  ((Sum ({sp_EngineerUtilzation_Test;1.Remote}, {sp_EngineerUtilzation_Test;1.engineer})));  
+//NumberVar Days    := Truncate  (TotalSec / 36000); 
+  NumberVar Hours   := Truncate ( TotalSec / 3600); 
+ NumberVar Minutes := Truncate  (Remainder ( TotalSec , 3600) / 60) ; 
+ NumberVar Seconds := Remainder (TotalSec , 60) ; 
+
+//Totext ( Days ,    '##' ) +  ':' + 
+Totext ( Hours ,   '00' ) +  ':' + 
+Totext ( Minutes , '00' ) +  ':' + 
+Totext ( Seconds , '00' ) 
+
+//(((Sum ({sp_EngineerUtilzation_Test;1.jobdiff}, {sp_EngineerUtilzation_Test;1.engineer}))/{#RTotal0}))
+
+---
