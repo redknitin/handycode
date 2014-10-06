@@ -1,0 +1,7 @@
+Calling cognos reports externally
+
+To run the report without parameters, and to provide parameters in the query string:
+http://localhost:480/crn/cgi-bin/mod_cognos.dll?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27report_author%27%5d%2freport%5b%40name%3d%27TryImgChg%27%5d&ui.name=TryImgChg&run.outputFormat=&run.prompt=false&p_SEL_JOB=10002
+
+To run the report and prompt for values:
+http://localhost:480/crn/cgi-bin/mod_cognos.dll?b_action=cognosViewer&ui.action=run&ui.object=%2fcontent%2ffolder%5b%40name%3d%27report_author%27%5d%2freport%5b%40name%3d%27TryImgChg%27%5d&ui.name=TryImgChg&run.outputFormat=&run.prompt=true
