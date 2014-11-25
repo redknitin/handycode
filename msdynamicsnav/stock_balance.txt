@@ -1,0 +1,5 @@
+--Gets the item balances from the MS Dynamics Nav database. 
+select [Item No_] PART_CODE, [Location Code] STORE_CODE, SUM([Quantity]) QTY, [Unit of Measure Code] UOM, [Item Category Code] CAT_CODE 
+from [dbo].[Test Company$Item Ledger Entry] --Change the table name.
+group by [Item No_], [Location Code], [Unit of Measure Code], [Item Category Code]
+--having SUM([Quantity])>=0 --Use this to read only positive
